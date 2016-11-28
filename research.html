@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are You Actually Stronger?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html"><div class="headerItem">COMPARE</div></a>
+        <a href="research.html"><div class="headerItem active">RESEARCH</div></a>
+    </div>
+    <h1>What is <span class="title">Are You Actually Stronger?</span></h1>
+    <p><span class="title">Are You Actually Stronger</span> is an algorithm developed to test if somebody is actually stronger. It compensates for age, gender, and body weight to determine who is actually stronger. You can fork the codebase on <a href="https://github.com/rcobelli/AreYouActuallyStronger" target="_blank">GitHub</a>.</p>
+    <hr />
+    <table class="results">
+        <tr>
+            <th>Age Compensation</th>
+            <th>Body Weight Compensation</th>
+            <th>Gender Compensation</th>
+        </tr>
+        <tr>
+            <td>According to <a href="http://cathe.com/how-does-aging-affect-muscle-strength-and-mass" target="_blank">Friedrich</a>, the peak age for strength is around 30, but for our purposes (based on other sources), we calculate with the prime age between 25 and 30. Our calculations ignore age if the difference is less than 10 years. If the difference is 10 or greater, then we compensate by assuming you lose 3% of the muscle mass for every 10 years from 30.</td>
+            <td>For our calculations, weight is only taken into consideration if the difference is more than 15 lbs. Professional sport weight classes are not exactly 15 lbs brackets, but we felt 15 lbs was an acceptable simplification. The determination of how large the difference in strength should be for a specific lift was made by <a href="http://www.bodybuilding.com/fun/weis1.htm" target="_blank">bodybuilding.com</a>, although simplifications were made to match the generalization of weight classes.</td>
+            <td>According to the <a href="http://jap.physiology.org/content/89/1/81" target="_blank">Journal of Applied Physiology</a>, women have about 26 lbs. less of skeletal muscle mass. This translates to about 40% less upper-body strength, and 33% less lower-body strength.</td>
+        </tr>
+        <tr>
+            <td>The jury is still out on how much muscle mass you lose per year as you age. The condition (described <a href="http://www.webmd.com/healthy-aging/sarcopenia-with-aging" target="_blank">here</a>) varies based on many factors that aren't quantitative.</td>
+            <td>There was a lot of simplification made in this category, however it was necessary. There is going to be much larger difference between a 185 lbs Middleweight and a 204 lbs Middleweight compared to a 185 lbs Middleweight and a 184 lbs Welterweight.</td>
+            <td>The <a href="http://link.springer.com/article/10.1007/BF00235103" target="_blank">European Journal of Applied Physiology</a>, references women's grip strength shortcoming compared to mens. Although Shea states (<a href="http://www.apec-s.com/wp-content/uploads/2011/12/The-importance-of-grip-strength.pdf" target="_blank">here</a>) that grip strength is important in relation to strength, we did not factor this into our algorithm.</td>
+        </tr>
+    </table>
+</body>
+</html>

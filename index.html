@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are You Actually Stronger?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html"><div class="headerItem active">COMPARE</div></a>
+        <a href="research.html"><div class="headerItem">RESEARCH</div></a>
+    </div>
+    <h1>What is <span class="title">Are You Actually Stronger?</span></h1>
+    <p><span class="title">Are You Actually Stronger</span> is an algorithm developed to test if somebody is actually stronger. It compensates for age, gender, and body weight to determine who is actually stronger. You can check our research <a href="research.php">here</a> and fork the codebase on <a href="https://github.com/rcobelli/AreYouActuallyStronger" target="_blank">GitHub</a>.</p>
+
+    <hr />
+    <form method="post" action="result.php">
+        <table>
+            <tr>
+                <th></th>
+                <th>Person #1</th>
+                <th>Person #2</th>
+            </tr>
+            <tr>
+                <td class="right"><label>Body Weight (lbs)</label></td>
+                <td><input type="text" name="weight1"></td>
+                <td><input type="text" name="weight2"></td>
+            </tr>
+            <tr>
+                <td class="right"><label>Age (yrs)</label></td>
+                <td><input type="text" name="age1"></td>
+                <td><input type="text" name="age2"></td>
+            </tr>
+            <tr>
+                <td class="right"><label>Gender</label></td>
+                <td class="center">
+                    <select name="gender1">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </td>
+                <td class="center">
+                    <select name="gender2">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="right"><label>Resistance (lbs)</label></td>
+                <td><input type="text" name="number1"></td>
+                <td><input type="text" name="number2"></td>
+            </tr>
+            <tr>
+                <td class="right"><label>Lift Type</label></td>
+                <td colspan="2" class="center">
+                    <select name="type">
+                        <option value="squat">Squat</option>
+                        <option value="benchPress">Bench Press</option>
+                        <option value="deadlift">Deadlift</option>
+                        <option value="dumbellPress">One Dumbell Press</option>
+                        <option value="dumbellCurl">Dumbell Curl</option>
+                        <option value="tricepExtension">Tricep Extension</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="center">
+                <td colspan="3" style="padding-top: 15px;"><input type="submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
