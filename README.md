@@ -3,7 +3,7 @@
 An algorithm developed to see if somebody is actually stronger with compensation based on Age, Weight, and Gender.
 
 ## Check It Out
-[https://rybel-llc.com/ryan/strength/](https://rybel-llc.com/ryan/strength/)
+[https://rcobelli.github.io/AreYouActuallyStronger/](https://rcobelli.github.io/AreYouActuallyStronger/)
 
 ## Contributing
 
