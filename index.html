@@ -46,6 +46,10 @@
             break;
         }
 
+        // console.log("Pre-Gender");
+        // console.log("Person 1: " + person1Value);
+        // console.log("Person 2: " + person2Value);
+
         var person1Gender = document.getElementById("gender1").value;
         var person2Gender = document.getElementById("gender2").value;
 
@@ -69,55 +73,56 @@
             }
         }
 
+        // console.log("Pre-Age");
+        // console.log("Person 1: " + person1Value);
+        // console.log("Person 2: " + person2Value);
+
         var person1Age = document.getElementById("age1").value;
         var person2Age = document.getElementById("age2").value;
 
         // Age compensation
-        var oldest = 0;
-        if (person1Age > person2Age) {
-            oldest = 1;
-        }
-        else if (person1Age < person2Age) {
-            oldest = 2;
-        }
-
         if (Math.abs(person1Age - person2Age) >= 10) {
             if (Math.max(person1Age,person2Age) > 30) {
                 if (person1Age > person2Age) {
                     person1Value = (((Math.abs(person1Age - person2Age) / 10) * 0.03) + 1.0) * person1Value;
                 }
-                else if (person1Age < person2Age) {
+                else {
                     person2Value = (((Math.abs(person1Age - person2Age) / 10) * 0.03) + 1.0) * person2Value;
                 }
             }
-            if (Math.min(person1Age,person2Age) < 25) {
+            else if (Math.min(person1Age,person2Age) < 25) {
                 if (person1Age < person2Age) {
                     person1Value = (((Math.abs(person1Age - person2Age) / 10) * 0.03) + 1.0) * person1Value;
                 }
-                else if (person1Age > person2Age) {
+                else {
                     person2Value = (((Math.abs(person1Age - person2Age) / 10) * 0.03) + 1.0) * person2Value;
                 }
             }
         }
+
+        // console.log("Pre-Weight");
+        // console.log("Person 1: " + person1Value);
+        // console.log("Person 2: " + person2Value);
 
         var person1Weight = document.getElementById("weight1").value;
         var person2Weight = document.getElementById("weight2").value;
 
+        console.log(Math.abs(person1Weight - person2Weight));
+
         // Weight compensation
         if (Math.abs(person1Weight - person2Weight) >= 15) {
             if (person1Weight > person2Weight) {
-                person2Value = ((Math.abs(person1Weight - person2Weight) / 15) * diff) + person2Value;
+                person2Value = parseFloat(person2Value) + ((Math.abs(person1Weight - person2Weight) / 15) * diff);
             }
-            else if (person1Weight < person2Weight) {
-                person1Value = ((Math.abs(person1Weight - person2Weight) / 15) * diff) + person1Value;
+            else {
+                person1Value = parseFloat(person1Value) + ((Math.abs(person1Weight - person2Weight) / 15) * diff);
             }
         }
 
-        console.log("Person 1: " + person1Value);
-        console.log("Person 2: " + person2Value);
+        // console.log("Person 1: " + person1Value);
+        // console.log("Person 2: " + person2Value);
 
         alert("Person 1: " + Math.round(person1Value) + " adjusted lbs.\nPerson 2: " + Math.round(person2Value) + " adjusted lbs.");
-
     }
     </script>
 </head>
